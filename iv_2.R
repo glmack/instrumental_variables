@@ -51,6 +51,15 @@ model3 <- lm(education  ~ feducation,
           
 summary(model3)
 
+# model 4
+model4 <- lm(log(wage) - fitted.values(model3),
+    data = subset(PSID1976, participation == "yes"))
+summary(model4)
+
+model5 <- ivreg(log(wage) ~ education | feducation,
+    data = subset(PSID1976, participation == "yes"))
+summary(model5)
+
 
 
 
