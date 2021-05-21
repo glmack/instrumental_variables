@@ -80,3 +80,4 @@ ivmodel2 = ivreg(lwage ~ educ12 + exper + reg661 + reg662 + reg663 +
 ivmodel2
 
 robust.se(ivmodel2)
+
