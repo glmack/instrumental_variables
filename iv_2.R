@@ -60,10 +60,23 @@ model5 <- ivreg(log(wage) ~ education | feducation,
     data = subset(PSID1976, participation == "yes"))
 summary(model5)
 
+library(devtools)
 
+# observe a variable, the instrument, that is correlated with the outcome variable
+# assume that instrument does not have a causal effect on the treatment variable
+# assume that instrument has a causal effect on the treatment
+# assume that instrument as if randomly assigned
+# b/c instrument assumed to be as if randomly assigned, causal effect of instrument on explanatory variable is their correlation with the data
+# since instrument is randomly assigned, it is not correlated with other confounders, except the treatment
 
+# if instrument shows clear correlation with outcome, it is because the treatment did have an effect
 
+# pretreatment variables are fixed before treatment is assigned
+# pretreatment variables may be observed and unobserved variables/confounding variables
 
+# instrument - treatment - outcome
+
+# instrument provides an exogenouse source of variation
 
 
 
