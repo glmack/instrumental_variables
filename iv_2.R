@@ -78,5 +78,28 @@ library(devtools)
 
 # instrument provides an exogenouse source of variation
 
+#---------
+library(data.table)
+
+# read
+ak91 <- fread('http://masteringmetrics.com/wp-content/uploads/2015/01/Data.zip
+
+
+This posting includes three data sets. 
+The first is a minimal 1980 ASCII extract without covariates.  This data set was used in Angrist and Krueger (1995) and Angrist, Imbens, and Krueger (1999). 
+
+# load minimal 1980 ASCII file from Angrist and Krueger 1991
+ak91_1 <- fread('https://economics.mit.edu/files/397')
+ak91_2 <- fread('https://economics.mit.edu/files/390')
+
+# load ASCII file with 1980 census extract from Angrist and Krueger 1991
+# ASCII data set in the file QOB.rar, which contains the 1980 census extract from Angrist and Krueger (1991) with covariates (men born 1930-39 and 1940-49)
+
+ak91_3 <- fread('https://economics.mit.edu/files/2853')
+ak91_4 <- fread('https://economics.mit.edu/files/5354') # descriptive statistics file explaining above
+
+# load Stata file with original 1970 and 1980 census data, including all cohorts and covariates
+Third, NEW7080.rar, a larger Stata data set with the complete original Angrist and Krueger 1970 and 1980 extracts, and all cohorts (men born 1920-29 in 1970, men born 1930-39 in 1980, and men born 1940-49 in 1980).
+ak91_5 <- fread('https://economics.mit.edu/files/2854')
 
 
